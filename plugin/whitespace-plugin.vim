@@ -26,7 +26,7 @@ EOF
 " only the `myluamodule` directory is specified, Neovim will look for a
 " `lua.lua` file, then an `init.lua` file in that directory. In this case, it
 " will find the `lua\myluamodule\init.lua` file.
-lua myluamodule = require("myluamodule")
+lua myluamodule = require("whitespace-plugin")
 
 " Once the `require` statement completes, the `global_lua_function` Lua
 " function defined in `lua\myluamodule\init.lua` will be available without
