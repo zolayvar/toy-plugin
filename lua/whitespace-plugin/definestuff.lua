@@ -7,9 +7,9 @@ end
 -- importer to decide what name to use in their own code.
 --
 -- Examples:
---    local ds = require('myluamodule/definestuff')
+--    local ds = require('whitespace-plugin/definestuff')
 --    ds.show_stuff()
---    local definestuff = require('myluamodule/definestuff')
+--    local definestuff = require('whitespace-plugin/definestuff')
 --    definestuff.show_stuff()
 return {
   show_stuff = show_stuff,

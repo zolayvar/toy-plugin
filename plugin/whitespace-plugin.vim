@@ -50,7 +50,7 @@ nmap <M-C-G> :lua global_lua_function()<CR>
 " function that was qualified with `local`, so it is only available outside
 " the module when qualified with the module name.  (See the `require`
 " statement above.)
-nmap <M-C-L> :lua myluamodule.local_lua_function()<CR>
+nmap <M-C-L> :lua module.local_lua_function()<CR>
 
 " Lua code can be defined in other files, rather than just `lua.lua` or
 " `init.lua`. Here, Lua code is defined in `lua\myluamodule\definestuff.lua`.
