@@ -2,7 +2,7 @@
 " file is being loaded. It is not required for the Lua code to execute and can
 " be deleted.
 
-echo "whitespace-plugin.vim: VimL code executing."
+echo "whitespace-plugin.vim: VimL code executing. hi"
 
 function LuaDoItVimL()
     echo "whitespace-plugin.vim LuaDoItVimL(): hello"
