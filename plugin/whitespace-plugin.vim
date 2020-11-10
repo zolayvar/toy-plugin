@@ -2,10 +2,10 @@
 " file is being loaded. It is not required for the Lua code to execute and can
 " be deleted.
 
-echo "nvim-example-lua-plugin.vim: VimL code executing."
+echo "whitespace-plugin.vim: VimL code executing."
 
 function LuaDoItVimL()
-    echo "nvim-example-lua-plugin.vim LuaDoItVimL(): hello"
+    echo "whitespace-plugin.vim LuaDoItVimL(): hello"
 endfunction
 
 " Neovim knows about finding VimL files in the `plugin` directory, but it
@@ -15,7 +15,7 @@ endfunction
 " 1. Lua code can be embedded in a VimL file by using a lua block.
 lua <<EOF
     function lua_do_it_lua()
-        print("nvim-example-lua-plugin.vim lua_do_it_lua(): hello")
+        print("whitespace-plugin.vim lua_do_it_lua(): hello")
     end
 
     print "nvim-example-lua-plugin.vim: Lua code executing."
@@ -26,7 +26,7 @@ EOF
 " only the `myluamodule` directory is specified, Neovim will look for a
 " `lua.lua` file, then an `init.lua` file in that directory. In this case, it
 " will find the `lua\myluamodule\init.lua` file.
-lua myluamodule = require("whitespace-plugin")
+lua module = require("whitespace-plugin")
 
 " Once the `require` statement completes, the `global_lua_function` Lua
 " function defined in `lua\myluamodule\init.lua` will be available without
@@ -36,7 +36,7 @@ lua global_lua_function()
 " Once the `require` statement completes, the `local_lua_function` Lua
 " function defined in `lua\myluamodule\init.lua` will be available when
 " qualified with the module name.
-lua myluamodule.local_lua_function()
+lua module.local_lua_function()
 
 " A Lua function can be mapped to a key. Here, Alt-Ctrl-G will echo a message.
 " This is a mapping to the function that wasn't carefully scoped in the Lua
@@ -54,4 +54,4 @@ nmap <M-C-L> :lua myluamodule.local_lua_function()<CR>
 
 " Lua code can be defined in other files, rather than just `lua.lua` or
 " `init.lua`. Here, Lua code is defined in `lua\myluamodule\definestuff.lua`.
-lua require("myluamodule.definestuff").show_stuff()
+lua require("whitespace-plugin.definestuff").show_stuff()
