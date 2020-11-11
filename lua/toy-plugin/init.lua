@@ -1,8 +1,8 @@
+local tp = {}
 
-local function delete_trailing_whitespace()
+tp.delete_trailing_whitespace = function()
   print "hello i am the lua function you have called me"
+  vim.api.nvim_command('%s/\s+$//g')
 end
 
-return {
-  delete_trailing_whitespace = delete_trailing_whitespace,
-}
+return tp
